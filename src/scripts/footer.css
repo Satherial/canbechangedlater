@@ -1,0 +1,9 @@
+.footer{
+  height: 12em;
+  width: 100%;
+  display: inline-block;
+  background-color: slategrey;
+}
+.footer h1, .footer h2{
+  text-align: center;
+}
