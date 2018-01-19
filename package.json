@@ -25,6 +25,7 @@
     "inferno": "^3.10.1",
     "inferno-compat": "^3.10.1",
     "inferno-create-element": "^3.10.1",
+    "material-icons": "^0.1.0",
     "material-ui": "^0.20.0",
     "npm-scripts": "^1.4.0",
     "postcss-cssnext": "^3.0.2",

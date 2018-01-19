@@ -1,0 +1,6 @@
+.team {
+  overflow: hidden;
+}
+.team-face {
+  background: url('../src/assets/test.jpg');
+}

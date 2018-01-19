@@ -1,0 +1,28 @@
+.mainPage {
+  overflow: hidden;
+}
+.mainPage h1 {
+  text-align: center;
+}
+.heroSection {
+  width: 100%;
+  height: 12em;
+  background-color: aquamarine;
+}
+.heroSection h1,
+.heroSection h4 {
+  text-align: center;
+}
+.heroSection h1 {
+  padding: 0.4em;
+  margin-top: 0;
+}
+.blockLine {
+  width: 100%;
+  text-align: center;
+  padding: 2em 0;
+}
+.blockItem {
+  display: inline-block;
+  margin: 0 2em;
+}

@@ -1,39 +1,44 @@
-import React from 'react'
-import MenuBar from './menubar'
+import * as React from 'react'
+import Home from './home'
+import MenuBar from './MenuBar'
+import Footer from './Footer'
 import MainBlock from './mainBlock'
 import GridListModule from './gridList'
-import Footer from './footer'
-import './mainPage.css'
+// import './mainPage.css'
 
-const MainPage = () => (
-  <div className="mainPage">
-    <MenuBar />
-    <div className="heroSection">
-      <h1>Motto accattivante</h1>
-      <h4>Dico sul serio per dinci baccolina baccona</h4>
-    </div>
-    <div className="blockLine">
-      <div className="blockItem">
-        <MainBlock />
+class MainPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentPage: 'main'
+    }
+  }
+
+  setPage(newPage) {
+    this.setState({ currentPage: newPage })
+  }
+
+  render() {
+    let page = null
+    switch (this.state.currentPage) {
+      case 'main':
+        page = <Home setPage={this.setPage} />
+        break
+      case 'team':
+        page = <Team setPage={this.setPage} />
+        break
+      default:
+        page = <Home setPage={this.setPage} />
+    }
+
+    return (
+      <div>
+        <MenuBar setPage={this.setPage} />
+        {page}
+        <Footer setPage={this.setPage} />
       </div>
-      <div className="blockItem">
-        <MainBlock />
-      </div>
-    </div>
-    <div className="blockLine">
-      <div className="blockItem">
-        <MainBlock />
-      </div>
-      <div className="blockItem">
-        <MainBlock />
-      </div>
-    </div>
-    <h1>Collaborazioni</h1>
-    <GridListModule />
-    <h1>Portfolio</h1>
-    <GridListModule />
-    <Footer />
-  </div>
-)
+    )
+  }
+}
 
 export default MainPage
